@@ -1,0 +1,47 @@
+.rowContainer {
+  height: auto;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--hover-bg);
+  }
+}
+
+.email {
+  color: var(--primary-color);
+}
+
+.address {
+  flex-direction: column;
+}
+
+.street,
+.zipcode {
+  display: inline-block;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.street {
+  background-color: var(--street-bg);
+  color: var(--street-color);
+}
+
+.zipcode {
+  background-color: var(--zipcode-bg);
+  color: var(--zipcode-color);
+}
+
+.streetLabel,
+.zipcodeLabel {
+  color: var(--primary-color);
+}
+
+.streetLabel {
+  margin-right: 0.4rem;
+}
+
+.zipcodeLabel {
+  margin-left: 0.4rem;
+}
