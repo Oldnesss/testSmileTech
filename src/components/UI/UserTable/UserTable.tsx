@@ -1,4 +1,4 @@
-import React from "react";
+
 import TableHeader from "../TableHeader/TableHeader";
 import styles from "./UseTable.module.scss";
 import UserRow from "../UserRow/UserRow";

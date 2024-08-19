@@ -1,4 +1,3 @@
-import React from "react";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useSortUsers from "../../hooks/useSortUsers";
 import useFilterUsers from "../../hooks/useFilterUsers";
@@ -27,7 +26,6 @@ export default function UserList(): JSX.Element {
             <button onClick={fetchUsers} className={styles.refreshButton}>
               Обновить
             </button>
-            
           </div>
         </div>
         <div className={styles.tableContainer}>

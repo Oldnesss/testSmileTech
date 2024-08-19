@@ -1,5 +1,3 @@
-import React from "react";
-
 import styles from "./TableHeader.module.scss";
 import { User } from "../../../types/User";
 
