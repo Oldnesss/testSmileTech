@@ -13,8 +13,22 @@ export default function useSortUsers(users: User[]) {
     const { field, order } = sortConfig;
 
     return [...users].sort((a, b) => {
-      if (a[field] < b[field]) return order === "asc" ? -1 : 1;
-      if (a[field] > b[field]) return order === "asc" ? 1 : -1;
+      let aValue: string | number = "";
+      let bValue: string | number = "";
+
+      if (field === "address") {
+        aValue = a.address.street;
+        bValue = b.address.street;
+      } else if (field === "company") {
+        aValue = a.company.name;
+        bValue = b.company.name;
+      } else {
+        aValue = a[field] as string | number;
+        bValue = b[field] as string | number;
+      }
+
+      if (aValue < bValue) return order === "asc" ? -1 : 1;
+      if (aValue > bValue) return order === "asc" ? 1 : -1;
       return 0;
     });
   }, [users, sortConfig]);
